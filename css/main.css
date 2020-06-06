@@ -1,0 +1,58 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    background-color: #0099ff;
+}
+
+.container{
+    border-radius: 50px !important;
+}
+form{
+    position: relative;
+}
+form button{
+    float: right;
+    border-radius: 50px !important;
+}
+.form-group{
+    position: relative;
+}
+.form-group img{
+    visibility: hidden;
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    right: 10px;
+    top: 45px;
+}
+small{
+    visibility: hidden;
+}
+
+.form-control{
+    border-radius: 50px !important;
+}
+
+/* Messages */
+.successs .form-control{
+    border-color: #28a745 !important;
+}
+.successs .check{
+    visibility: visible !important;
+}
+
+.error .form-control{
+    border-color: #dc3545 !important;
+}
+
+.error .info{
+    visibility: visible;
+}
+
+.form-group.error small{
+    color: #dc3545;
+    visibility: visible !important;
+}

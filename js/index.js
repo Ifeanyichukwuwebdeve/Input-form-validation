@@ -23,7 +23,7 @@ const checkInputs = () => {
         setErrorFor(username, 'Username cannot be blank')
     } 
     else {
-        setSuccessFor(username)
+        setSuccessFor(username, '')
     }
 
     if (emailValue === '') {
@@ -33,45 +33,25 @@ const checkInputs = () => {
         setErrorFor(email, 'Email is not valid')
     }
     else {
-        setSuccessFor(email)
+        setSuccessFor(email, ' We\'ll never share your email with anyone else.')
     }
 
     if (passwordValue === '') {
         setErrorFor(password, 'Password cannot be blank')
     }else{
-        setSuccessFor(password)  
+        setSuccessFor(password, '')  
     }
     if (passwordCheckValue === '') {
         setErrorFor(passwordCheck, 'Password check is blank')
     } else if (passwordValue !== passwordCheckValue) {
         setErrorFor(passwordCheck, 'Password dose not match')
     }else{
-        setSuccessFor(passwordCheck)
+        setSuccessFor(passwordCheck, '')
     }
 
-    successMessage()
 }
 
-const successMessage = () => {
-    const firstCon = () => {
-        if (userName.parentElement.className.includes('form-group successs') && email.parentElement.className.includes('form-group successs')) {
-            console.log('It works')
-        }else{
-            console.log(userName.parentElement.className)
-        }
-    }
 
-    const secondCon = () => {
-        if (password.parentElement.className.includes('form-group successs') && passwordCheck.parentElement.className.includes('form-group successs')) {
-            
-        }else {
-
-        }
-    }
-
-
-}
-//  
 const setErrorFor = (input, message) => {
     const formGroup = input.parentElement
     const small = formGroup.querySelector('small')
@@ -81,9 +61,11 @@ const setErrorFor = (input, message) => {
     formGroup.className = 'form-group error'
 }
 
-const setSuccessFor = (input) => {
+const setSuccessFor = (input, message) => {
     const formGroup = input.parentElement
+    const small = formGroup.querySelector('small')
 
+    small.innerText = message
     formGroup.className = 'form-group successs'
 }
 
@@ -114,18 +96,27 @@ const checkInputs2 = () => {
         setErrorFor(email2, 'Email is not valid')
     }
     else {
-        setSuccessFor(email2)
+        setSuccessFor(email2, ' We\'ll never share your email with anyone else.')
     }
 
     if (passwordValue2 === '') {
         setErrorFor(password2, 'Password cannot be blank')
     }else{
-        setSuccessFor(password2)  
+        setSuccessFor(password2, '')  
     }
 }
 
-// Hide second form
 
-const hideForm = document.querySelector('.hide')
 
-console.log(document)
+//  Another form
+const signUpButton = document.getElementById('signUp');
+const signInButton = document.getElementById('signIn');
+const container = document.getElementById('container');
+
+signUpButton.addEventListener('click', () => {
+	container.classList.add("right-panel-active");
+});
+
+signInButton.addEventListener('click', () => {
+	container.classList.remove("right-panel-active");
+});

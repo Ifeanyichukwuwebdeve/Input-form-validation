@@ -10,18 +10,20 @@
 </head>
 <body>
 
-    <div class="container bg-white mt-5 p-5">
+
+
+    <div class="container form-item bg-white mt-5 p-5">
 
       <h2 class="text-primary text-center">Sign Up</h2>
         <form id="form">
             <div class="form-group">
                 <label for="username">Username</label>
-                <input type="text" class="form-control" id="username" aria-describedby="usernamelHelp" placeholder="Adamsif23"> <img src="img/info-circle-solid.svg" class="info" alt=""> <img src="img/check-circle-solid.svg" class="check" alt="">
+                <input type="text" class="form-control" id="username" aria-describedby="usernamelHelp" placeholder="Username"> <img src="img/info-circle-solid.svg" class="info" alt=""> <img src="img/check-circle-solid.svg" class="check" alt="">
                 <small>We'll never share your email with anyone else.</small>
               </div>
             <div class="form-group">
               <label for="email">Email </label>
-              <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="adamsifeanyi@gmail.com" > <img src="img/info-circle-solid.svg" class="info" alt=""> <img src="img/check-circle-solid.svg" class="check" alt="">
+              <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Email" > <img src="img/info-circle-solid.svg" class="info" alt=""> <img src="img/check-circle-solid.svg" class="check" alt="">
               <small>We'll never share your email with anyone else.</small>
             </div>
             <div class="form-group">
@@ -39,24 +41,42 @@
           </form>
     </div>
 
-    <div class="container mt-5 bg-white p-5 hide">
-        <h2 class="text-primary text-center">Sign In</h2>
-      <form id="form2">
-      <div class="form-group">
-        <label for="email2">Email </label>
-        <input type="email" class="form-control" id="email2" aria-describedby="emailHelp" placeholder="adamsifeanyi@gmail.com" > <img src="img/info-circle-solid.svg" class="info" alt=""> <img src="img/check-circle-solid.svg" class="check" alt="">
-        <small>We'll never share your email with anyone else.</small>
-      </div>
+  <div class="container form-item bg-white p-5 ">
+    
+    <h2 class="text-primary text-center">Sign In</h2>
+  <form id="form2">
+  <div class="form-group">
+    <label for="email2">Email </label>
+    <input type="email" class="form-control" id="email2" aria-describedby="emailHelp" placeholder="Email" > <img src="img/info-circle-solid.svg" class="info" alt=""> <img src="img/check-circle-solid.svg" class="check" alt="">
+    <small>We'll never share your email with anyone else.</small>
+  </div>
 
-      <div class="form-group">
-        <label for="password2">Password</label>
-        <input type="password" class="form-control" id="password2" placeholder="Password"><img src="img/info-circle-solid.svg" class="info" alt=""> <img src="img/check-circle-solid.svg" class="check" alt="">
-        <small>We'll never share your email with anyone else.</small>
-      </div>
-      <button type="submit" class="btn btn-outline-primary pl-3 pr-3">Sign In</button>
+  <div class="form-group">
+    <label for="password2">Password</label>
+    <input type="password" class="form-control" id="password2" placeholder="Password"><img src="img/info-circle-solid.svg" class="info" alt=""> <img src="img/check-circle-solid.svg" class="check" alt="">
+    <small>We'll never share your email with anyone else.</small>
+  </div>
+  <button type="submit" class="btn btn-outline-primary pl-3 pr-3">Sign In</button>
+  </form>
+</div> 
 
-      </form>
+  <div class="slide" id="container">
+   
+    <div class="overlay-container">
+        <div class="overlay">
+            <div class="overlay-panel overlay-left">
+                <button class="ghost" id="signIn">Sign In</button>
+            </div>
+            <div class="overlay-panel overlay-right">
+                <button class="ghost" id="signUp">Sign Up</button>
+            </div>
+        </div>
     </div>
+</div>
+
+<footer class="footer text-center">
+  <p>Designed with love by <a href="#">Adams'Syntax</a></p>
+</footer>
       <script src="js/jquery-3.4.1.slim.min.js"></script>
       <script src="js/popper.min.js"></script>
       <script src="js/bootstrap.min.js"></script>

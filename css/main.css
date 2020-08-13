@@ -8,7 +8,7 @@ body{
 }
 
 .container{
-    border-radius: 50px !important;
+    border-radius: 20px !important;
 }
 section{
     margin-bottom: 40px;
@@ -18,7 +18,7 @@ form{
 }
 form button{
     float: right;
-    border-radius: 50px !important;
+    border-radius: 20px !important;
 }
 .form-group{
     position: relative;
@@ -36,15 +36,20 @@ small{
 }
 
 .form-control{
-    border-radius: 50px !important;
-}
-
-.container:first-child{
-    display: none;
+    border-radius: 20px !important;
 }
 
 .container{
     margin-top: 100px !important;
+}
+
+.container-first{
+    display: none;
+}
+
+
+.btn-outline-primary {
+	margin-bottom: 50px !important;
 }
 
 /* Messages */
@@ -89,25 +94,27 @@ small{
 
 /* signformstyle */
 
-button {
-    margin: 20px;
+.ghost {
+    margin-top: 20px;
     background-color: transparent;
     color: #fff;
     border: 1px solid #fff;
 	border-radius: 20px;
 	font-size: 15px;
-	padding: 12px 19px;
+	padding: 12px 9px;
 	letter-spacing: 1px;
 	transition: transform 80ms ease-in;
 }
 
-button:active {
+.ghost:active {
 	transform: scale(0.95);
 }
 
-button:focus {
+.ghost:focus {
 	outline: none;
 }
+
+
 
 .slide.right-panel-active .sign-in-container {
 	transform: translateX(100%);
